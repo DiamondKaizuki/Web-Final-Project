@@ -126,10 +126,37 @@ button:hover { background: #666; }
 }
 
 /* Dark Mode */
-.dark label {
-  color: #f0f0f0; /* Bright label text */
+.dark {
+  background: #121212;
+  color: #e5e5e5;
 }
 
+/* Main Panels */
+.dark #add-section,
+.dark #library-section {
+  background: #1e1e1e;
+  box-shadow: 0 2px 5px rgba(255,255,255,0.05);
+}
+
+/* Book Cards */
+.dark .book-card {
+  background: #1b1b1b;
+  border: 1px solid #333;
+  box-shadow: 0 2px 5px rgba(255,255,255,0.05);
+}
+
+/* Fix ALL text inside book cards */
+.dark .book-card,
+.dark .book-card * {
+  color: #e5e5e5 !important;
+}
+
+/* Labels */
+.dark label {
+  color: #f0f0f0;
+}
+
+/* Inputs, selects, textareas */
 .dark input,
 .dark select,
 .dark textarea {
@@ -138,11 +165,28 @@ button:hover { background: #666; }
   border: 1px solid #555;
 }
 
-.dark input::placeholder {
+/* Placeholder text */
+.dark input::placeholder,
+.dark textarea::placeholder {
   color: #bbbbbb;
 }
 
+/* Buttons */
 .dark button {
   background: #333;
   color: #f5f5f5;
+  border: 1px solid #444;
+}
+
+.dark button:hover {
+  background: #444;
+}
+
+/* “Mark Read” highlight colors in dark mode */
+.dark .read {
+  border-left: 4px solid #4caf50;
+}
+
+.dark .unread {
+  border-left: 4px solid #f44336;
 }

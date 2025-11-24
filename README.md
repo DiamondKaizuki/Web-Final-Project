@@ -1,5 +1,5 @@
-The use of this app is quite streight forward
-After "booting" up the app by either going to the action page and getting the link or just pasteing this one https://diamondkaizuki.github.io/Web-Final-Project
-Once you enter the page there are five sections you can input characters and numbers, three however are optional and are not required to be filled
-You first need the book's title, then the author, other than those everything else is optional and used to your own convinence
+The use of this app is quite streight forward \n
+After "booting" up the app by either going to the action page and getting the link or just pasteing this one https://diamondkaizuki.github.io/Web-Final-Project \n
+Once you enter the page there are five sections you can input characters and numbers, three however are optional and are not required to be filled\n
+You first need the book's title, then the author, other than those everything else is optional and used to your own convinence\n
 Once you complete the form press sumit it will make a card recording it in the library section where you can also edit what chapter you are on or change the link to a 3rd party website

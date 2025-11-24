@@ -1,4 +1,3 @@
-// Full JS (wrapped in DOMContentLoaded for safety)
 document.addEventListener("DOMContentLoaded", () => {
 
   // --------- Element references ---------
@@ -33,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initialize
   loadLibrary();
 
-  // --------- Add Book (form submit) ---------
+  // --------- Add Book ---------
   addBookForm.addEventListener("submit", (ev) => {
     ev.preventDefault();
 
@@ -45,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!Number.isFinite(chapter) || chapter < 1) chapter = 1;
 
     if (!title || !author) {
-      // Title & Author are required for clarity
+      // Title & Author are required
       alert("Please enter Title and Author.");
       return;
     }
@@ -80,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
       titleEl.textContent = book.title;
       card.appendChild(titleEl);
 
-      // Author + Genre (Genre placed under title/author as requested)
+      // Author + Genre
       const meta = document.createElement("div");
       meta.className = "card-meta";
       meta.innerHTML = `<div><strong>Author:</strong> ${book.author}</div>
@@ -107,18 +106,18 @@ document.addEventListener("DOMContentLoaded", () => {
       const editLinkBtn = document.createElement("button");
       editLinkBtn.className = "small-btn";
       editLinkBtn.textContent = book.link ? "Edit Link" : " ";
-      // Hide the edit button text if there is no link (we offer Add Link button instead)
+      // Hide the edit button text if there is no link
       if (!book.link) editLinkBtn.style.display = "none";
 
       editLinkBtn.addEventListener("click", () => {
-        // Find the actual link anchor if present for hiding (we create inside startLinkEdit if needed)
+        // Find the actual link anchor if present for hiding 
         startLinkEdit(book, card);
       });
 
       linkRow.appendChild(editLinkBtn);
       card.appendChild(linkRow);
 
-      // If book has a link, show as a styled anchor below the buttons (keeps button behavior + anchor)
+      // If book has a link, show as a styled anchor below the buttons
       if (book.link) {
         const anchor = document.createElement("a");
         anchor.href = book.link;
@@ -226,7 +225,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   } // end renderBooks
 
-  // --------- Inline Link Editing (shared helper) ---------
+  // --------- Inline Link Editing ---------
   function startLinkEdit(book, card, oldLinkEl = null, oldBtn = null) {
     // hide existing anchor/button elements inside this card if present
     if (oldLinkEl) oldLinkEl.style.display = "none";
@@ -268,7 +267,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --------- Theme toggle (persisted) ---------
+  // --------- Theme toggle ---------
   (function initTheme() {
     const saved = localStorage.getItem("theme");
     if (saved === "dark") {

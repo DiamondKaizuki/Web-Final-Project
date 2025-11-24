@@ -146,3 +146,11 @@ button:hover { background: #666; }
   background: #333;
   color: #f5f5f5;
 }
+
+.dark .book-card p {
+  color: #dddddd !important;
+}
+
+.dark .book-card p span {
+  color: #bbbbbb !important;
+}

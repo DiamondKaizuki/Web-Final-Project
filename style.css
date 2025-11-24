@@ -1,139 +1,117 @@
+/* Base page styling */
 body {
-  font-family: Arial, sans-serif;
-  background: #f7f7f7;
-  margin: 0;
-  padding: 0;
-  color: #111;
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+    color: #222;
 }
 
 header, footer {
-  background: #333;
-  color: white;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    background: #333;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 main {
-  padding: 20px;
-  max-width: 900px;
-  margin: auto;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
 }
 
-/* Containers */
-#add-book-section, #library-section {
-  background: white;
-  padding: 20px;
-  margin-bottom: 30px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+/* Sections */
+#add-section, #library-section {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
 }
 
-/* Form */
+/* Form styling */
 form {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 form label {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 180px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 200px;
 }
 
 button {
-  padding: 10px 15px;
-  background: #444;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    padding: 8px 12px;
+    border: none;
+    background: #444;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
 }
-
 button:hover { background: #666; }
 
-/* Book Cards */
+/* Grid of books */
 .book-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
 }
 
+/* Book card */
 .book-card {
-  background: #fafafa;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.12);
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.book-card h3 { margin: 0; }
-
-.card-meta {
-  font-size: 0.95rem;
-  color: #333;
-}
-
-.read {
-  border-left: 6px solid #27a745;
-}
-
-.card-buttons {
-  margin-top: 10px;
-  display: flex;
-  gap: 8px;
-}
-
-/* Chapter & Link editing */
-.chapter-row, .link-row {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  font-weight: 600;
-}
-
-.chapter-input, .link-input {
-  padding: 6px 8px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  flex: 1;
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .small-btn {
-  padding: 6px 8px;
-  font-size: 0.9rem;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+}
+
+.danger {
+    background: #a10000;
+}
+
+.chapter-input {
+    width: 80px;
+    padding: 6px 8px;
+    margin-top: 6px;
+}
+
+/* Link button */
+.book-link {
+    background: #005dc1;
+    padding: 6px 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
 }
 
 /* Dark Mode */
 .dark {
-  background: #121212;
-  color: #eee;
+    background: #121212;
+    color: #e5e5e5;
 }
 
-.dark header, .dark footer {
-  background: #0b0b0b;
-}
-
-.dark #add-book-section, .dark #library-section {
-  background: #1e1e1e;
-  box-shadow: 0 2px 5px rgba(255,255,255,0.03);
+.dark #add-section,
+.dark #library-section {
+    background: #1e1e1e;
+    box-shadow: 0 2px 5px rgba(255,255,255,0.05);
 }
 
 .dark .book-card {
-  background: #222;
-  box-shadow: 0 2px 4px rgba(255,255,255,0.03);
+    background: #222;
+    box-shadow: 0 2px 4px rgba(255,255,255,0.05);
 }
 
-.dark .card-meta { color: #ddd; }
-
-.dark button { background: #3a3a3a; color: #fff; }
-
-.dark .chapter-input, .dark .link-input {
-  background: #333;
-  color: #fff;
-  border: 1px solid #444;
+.dark button {
+    background: #333;
 }

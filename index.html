@@ -1,56 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Library App</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Library App</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-  <header>
+<header>
     <h1>My Library</h1>
-    <button id="theme-toggle">Dark Mode</button>
-  </header>
+    <button id="themeToggle">Dark Mode</button>
+</header>
 
-  <main>
+<main>
 
-    <!-- Add Book Form -->
-    <section id="add-book-section">
-      <h2>Add a Book</h2>
+    <!-- ADD BOOK -->
+    <section id="add-section">
+        <h2>Add a Book</h2>
 
-      <form id="book-form">
-        <label>Title:
-          <input type="text" id="title-input" required />
-        </label>
+        <form id="addBookForm">
+            <label>
+                Title:
+                <input type="text" id="titleInput" required />
+            </label>
 
-        <label>Author:
-          <input type="text" id="author-input" required />
-        </label>
+            <label>
+                Chapter (optional):
+                <input type="number" id="chapterInput" min="1" placeholder="1" />
+            </label>
 
-        <label>Genre:
-          <input type="text" id="genre-input" required />
-        </label>
+            <label>
+                Link (optional):
+                <input type="url" id="linkInput" placeholder="Paste reading link..." />
+            </label>
 
-        <label>Chapter:
-          <input type="number" id="chapter-input" min="1" placeholder="1" />
-        </label>
-
-        <label>Link:
-          <input type="url" id="link-input" placeholder="https://example.com" />
-        </label>
-
-        <button type="submit">Add Book</button>
-      </form>
+            <button type="submit">Add Book</button>
+        </form>
     </section>
 
-    <!-- Book List -->
+    <!-- LIBRARY DISPLAY -->
     <section id="library-section">
-      <h2>Your Books</h2>
-      <div id="book-list" class="book-grid" aria-live="polite"></div>
+        <h2>Your Books</h2>
+        <div id="libraryContainer" class="book-grid"></div>
     </section>
 
-  </main>
-  <script src="script.js"></script>
+</main>
+
+<footer></footer>
+
+<script src="script.js"></script>
 </body>
 </html>
